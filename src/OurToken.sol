@@ -1,8 +1,10 @@
-// SPDX Lisence Identifier: MIT
+// SPDX Lisence Identifier: MITeee
 pragma solidity ^0.8.0;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract OurToken is ERC20 {
-    //constructor goes here
+    constructor(uint256 initialSupply) ERC20("OurToken", "OT") {
+        _mint(msg.sender, initialSupply);
+    }
 }
